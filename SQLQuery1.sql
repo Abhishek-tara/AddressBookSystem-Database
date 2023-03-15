@@ -67,3 +67,8 @@ update AddressBookDetails
 set Book_Name='Manager',Contact_Type='Profession'
 where FirstName='Abhi'
 select * from AddressBookDetails
+
+------ UC 10: Ability to get number of contact persons by Type------
+select Count(*) as NumberOfContacts,Contact_Type
+from  AddressBookDetails
+Group by Contact_Type
