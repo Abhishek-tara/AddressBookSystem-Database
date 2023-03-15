@@ -29,3 +29,5 @@ values('Abhi', 'stark', '54 backstreet', 'CG', 'India', 123654, 09876557843, 'ab
 --display table
 select * from AddressBookDetails
 
+----UC4 ability to edit existing contact using their name---
+update AddressBookDetails set city='Mumbai' where firstName='Abhi'
