@@ -19,4 +19,13 @@ phoneNumber bigint,
 email varchar(200) not null
 )
 
-select * from  AddressBookDetails
+------ UC 3: Insert Values to Table ------
+insert into  AddressBookDetails
+values('Abhi', 'stark', '54 backstreet', 'CG', 'India', 123654, 09876557843, 'abhi@email.com'),
+('Ramesh', 'kumar', '12 SM nagar', 'Mysore', 'Karnataka', 100004, 09876554322, 'gitesh@email.com'),
+('Tarun', 'sharma', '3 AB nagar', 'Noida', 'UP', 543201, 09876552321, 'terisa@email.com'),
+('Rakesh', 'yadav', '84 MJ nagar', 'Chennai', 'Tamil Nadu', 129123, 09876554367, 'harsha@email.com')
+
+--display table
+select * from AddressBookDetails
+
