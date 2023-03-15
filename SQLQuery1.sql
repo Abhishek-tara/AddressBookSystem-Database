@@ -19,7 +19,7 @@ phoneNumber bigint,
 email varchar(200) not null
 )
 
------- UC 3: Insert Values to Table ------
+------ UC 3: Insert Values to Table ------00
 insert into  AddressBookDetails
 values('Abhi', 'stark', '54 backstreet', 'CG', 'India', 123654, 09876557843, 'abhi@email.com'),
 ('Ramesh', 'kumar', '12 SM nagar', 'Mysore', 'Karnataka', 100004, 09876554322, 'gitesh@email.com'),
@@ -31,3 +31,6 @@ select * from AddressBookDetails
 
 ----UC4 ability to edit existing contact using their name---
 update AddressBookDetails set city='Mumbai' where firstName='Abhi'
+
+--UC5 ability to delete existing contact using their name--
+delete from AddressBookDetails where firstName='gungun'
