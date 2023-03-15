@@ -33,7 +33,7 @@ select * from AddressBookDetails
 update AddressBookDetails set city='Mumbai' where firstName='Abhi'
 
 --UC5 ability to delete existing contact using their name--
-delete from AddressBookDetails where firstName='gungun'
+delete from AddressBookDetails where firstName='Tarun'
 
 --UC6 -- ability to retrieve person using city or state from the table
 select * from AddressBookDetails where city = 'Mysore' or state = 'karnataka'
@@ -46,3 +46,24 @@ select count(state) from AddressBookDetails
 select * from AddressBookDetails 
 WHERE city = 'Chennai'
 ORDER BY firstName
+
+------ UC 9: Identify each Address Book with name andType ------
+alter table AddressBookDetails 
+add Book_Name VARCHAR(20),
+Contact_Type VARCHAR(20)
+
+--Update values for Type=Friends--
+update AddressBookDetails
+set Book_Name='FriendName',Contact_Type='Friends'
+where FirstName='Ramesh' 
+
+--Update values for Type=Family--
+update AddressBookDetails
+set Book_Name='FamilyName',Contact_Type='Family'
+where FirstName='Rakesh'
+
+--Update values for Type=Profession--
+update AddressBookDetails
+set Book_Name='Manager',Contact_Type='Profession'
+where FirstName='Abhi'
+select * from AddressBookDetails
